@@ -4,9 +4,9 @@ This repository contains the Terraform/Terragrunt code to deploy an EKS cluster 
 
 ## Structure
 
-- `.\components` contains the Terragrunt components (modules). There are 2 components:
+- `./components` contains the Terragrunt components (modules). There are 2 components:
     - `infra` deploys the AWS infrastructure (EKS cluster, ...)
     - `cluster-apps` deploys the apps needed inside the cluster
-- `.\tf` contains the Terraform modules used by Terragrunt
+- `./tf` contains the Terraform modules used by Terragrunt
 
 
