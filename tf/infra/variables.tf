@@ -1,4 +1,4 @@
-variable "env" {
+variable "environment" {
   type = string
 }
 
@@ -12,4 +12,8 @@ variable "account_id" {
 
 variable "node_group_size" {
   type = number
+}
+
+variable "cluster_name" {
+  type = string
 }
