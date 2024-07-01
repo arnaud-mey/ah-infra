@@ -9,6 +9,7 @@ resource "helm_release" "argo_cd" {
   ]
   create_namespace = true
   namespace        = "argocd"
+  depends_on       = [helm_release.aws-load-balancer-controller]
 }
 
 resource "helm_release" "argo_cd_apps" {
@@ -20,4 +21,5 @@ resource "helm_release" "argo_cd_apps" {
   values = [
     "${file("values/argocd-apps.yaml")}"
   ]
+  depends_on = [helm_release.argo_cd]
 }
